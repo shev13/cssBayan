@@ -4,5 +4,60 @@
 }
 
 body {
+  margin: 2vw auto;
+  max-width: 580px;
   background-color: #f3f3f3;
 }
+
+.text-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1vw;
+  margin-top: 1vw;
+  border-top: 0.2vh solid #ccc;
+}
+
+
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Text */
+p {
+  padding: 1vw;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+/* Text <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+
+
+
+.slide * {
+  cursor: pointer;
+}
+
+.slider {
+  display: block;
+  margin: 0 auto;
+}
+
+.slider input {
+  display: none;
+}
+
+
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Image */
+img {
+  margin: 0 auto;
+  display: none;
+  width: 0;
+}
+
+.slider input:checked~label img {
+  display: block;
+  width: 90%;
+  transition: all 0.3s;
+}
+
+/* Image <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */

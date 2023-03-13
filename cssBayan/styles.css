@@ -2,12 +2,28 @@
   --color-hover: #3f68d8;
 }
 
+@font-face {
+  font-family: 'Inter';
+  src: local('Inter-Regular'), local('Inter Regular'),
+    url('./fonts/Inter-Regular.ttf');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: local('Inter-Bold'), local('Inter Bold'), url('./fonts/Inter-Bold.ttf');
+  font-weight: 700;
+  font-style: normal;
+}
+
 * {
   margin: 0;
   padding: 0;
 }
 
 body {
+  font-family: 'Inter';
   background-color: #f3f3f3;
 }
 
@@ -27,14 +43,15 @@ body {
 
 
 h1 {
-  font-size: 1.7rem;
+  font-size: 2.5rem;
+  font-weight: 400;
 }
 
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Text */
 p {
   padding: 1vw;
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: 400;
   line-height: 1.5;
   transition: all 0.3s;
 }
@@ -143,7 +160,7 @@ img {
   }
 
   h1 {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 
   p {
@@ -157,7 +174,7 @@ img {
   }
 
   h1 {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
   }
 
   p {

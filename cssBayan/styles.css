@@ -8,9 +8,12 @@
 }
 
 body {
-  margin: 2vw auto;
-  max-width: 580px;
   background-color: #f3f3f3;
+}
+
+.wrapper {
+  margin: 0 auto;
+  padding: 0 30vw;
 }
 
 .text-wrapper {
@@ -23,6 +26,9 @@ body {
 }
 
 
+h1 {
+  font-size: 1.7rem;
+}
 
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Text */
 p {
@@ -127,3 +133,36 @@ img {
 }
 
 /* Image <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+
+
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Media queries */
+@media (max-width: 900px) {
+  .wrapper {
+    padding: 0 20vw;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .wrapper {
+    padding: 0 5vw;
+  }
+
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-size: 1.0rem;
+  }
+}
+
+/* Media queries <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */

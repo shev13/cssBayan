@@ -1,0 +1,184 @@
+:root {
+  --color-hover: #3f68d8;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: local('Inter-Regular'), local('Inter Regular'),
+    url('./fonts/Inter-Regular.ttf');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: local('Inter-Bold'), local('Inter Bold'), url('./fonts/Inter-Bold.ttf');
+  font-weight: 700;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter';
+  font-weight: 700;
+  background-color: #f3f3f3;
+}
+
+.wrapper {
+  margin: 0 auto;
+  padding: 0 30vw;
+}
+
+.text-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1vw;
+  margin-top: 1vw;
+  border-top: 0.2vh solid #ccc;
+}
+
+
+h1 {
+  font-size: 2.5rem;
+}
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Text */
+p {
+  padding: 1vw;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  transition: all 0.3s;
+}
+
+input:checked~label p,
+.slider:hover p {
+  color: black;
+}
+
+p,
+.slide:active p {
+  color: var(--color-hover);
+}
+
+/* Text <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+
+
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Icon */
+.icon {
+  display: none;
+  align-items: center;
+  transition: all 0.3s;
+}
+
+.slider:hover .icon {
+  display: flex;
+}
+
+input:checked~label .icon,
+.slide:hover .icon {
+  transform: rotate(45deg);
+}
+
+.icon * {
+  background-color: black;
+  transition: all 0.3s;
+}
+
+.slide:active .icon * {
+  background-color: var(--color-hover);
+}
+
+.first-line {
+  height: 0.4vh;
+  width: 1vh;
+  border-top-left-radius: 0.4vh;
+  border-bottom-left-radius: 0.4vh;
+}
+
+.second-line {
+  height: 2.4vh;
+  width: 0.4vh;
+  border-radius: 0.4vh;
+}
+
+.third-line {
+  height: 0.4vh;
+  width: 1vh;
+  border-top-right-radius: 0.4vh;
+  border-bottom-right-radius: 0.4vh;
+}
+
+/* Icon <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+
+.slide * {
+  cursor: pointer;
+}
+
+.slider {
+  display: block;
+  margin: 0 auto;
+}
+
+.slider input {
+  display: none;
+}
+
+
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Image */
+img {
+  margin: 0 auto;
+  display: block;
+  width: 0;
+  transition: all 0.4s ease-out;
+}
+
+.slide:active img {
+  opacity: 0.5;
+}
+
+.slider .slide:hover img,
+.slider input:checked~label img {
+  width: 100%;
+}
+
+/* Image <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+
+
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Media queries */
+@media (max-width: 900px) {
+  .wrapper {
+    padding: 0 20vw;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .wrapper {
+    padding: 0 5vw;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 1.0rem;
+  }
+}
+
+/* Media queries <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
